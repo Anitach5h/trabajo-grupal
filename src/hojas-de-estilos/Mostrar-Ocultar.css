@@ -1,0 +1,61 @@
+/* Estilos para el campo-dos */
+.campo-de-entrada-dos {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.mostrar-ocultar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 8px;
+}
+
+.mostrar-ocultar label {
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+
+
+}
+
+.mostrar-ocultar input[type="checkbox"] {
+  appearance: none;
+  width: 24px;
+  height: 18px;
+  border: 2px solid white;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.mostrar-ocultar input[type="checkbox"]:checked::before {
+  content: '\2713';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: white;
+}
+
+.mostrar-ocultar input[type="checkbox"]:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+#mostrar-contrasena{
+  text-align: center;
+}

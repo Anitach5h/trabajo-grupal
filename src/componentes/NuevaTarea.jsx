@@ -2,6 +2,7 @@
 // Implementar un formulario en el frontend para ingresar el título y la descripción
 // de la nueva tarea
 import React, { useState } from 'react';
+import "../hojas-de-estilos/NuevaTarea.css";
 
 export function TaskForm() {
   const [title, setTitle] = useState('');
@@ -27,17 +28,22 @@ export function TaskForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-     <p> <label>
-        Titulo:
-        <input type="text" value={title} onChange={handleTitleChange} />
-      </label></p>
-      <p><label>
-        Descripcion:
-        <textarea value={description} onChange={handleDescriptionChange} />
-      </label></p>
-      <button type="submit">Agregar tarea</button>
-    </form>
+    <div className='contenedor-principal'>
+      <div className='contenedor-interno'>
+        <h1 className='titulo1'>Control de Tareas</h1>
+        <form onSubmit={handleSubmit} className='formulario'>
+          <label>
+            <p id='titulo2'>Titulo de la nueva tarea:</p>
+            <input type="text" value={title} onChange={handleTitleChange} className='texto' />
+          </label>
+          <label>
+            <p id='titulo2'> Descripcion:</p>
+            <textarea value={description} onChange={handleDescriptionChange} className='area-texto' />
+          </label>
+          <button type="submit" className='boton'>Agregar tarea</button>
+        </form>
+      </div>
+    </div>
   );
 };
 

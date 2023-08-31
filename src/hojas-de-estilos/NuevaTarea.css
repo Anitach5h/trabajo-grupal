@@ -1,0 +1,68 @@
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../imagenes/paisaje-fondo-tareas.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.contenedor-interno {
+  border-radius: 20px;
+  height: 500px;
+  width: 500px;
+  backdrop-filter: blur(10px);
+}
+
+.titulo1 {
+  font-size: 40px;
+  font-weight: 400;
+  font-family: sans-serif;
+  color: white;
+  text-decoration: underline;
+  margin-bottom: 50px;
+  margin-top: 60px;
+
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#titulo2 {
+  font-size: 20px;
+  font-weight: 400px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.texto,
+.area-texto {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.boton {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.boton:hover {
+  background-color: darkred;
+}
