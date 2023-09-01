@@ -3,7 +3,7 @@ import "../hojas-de-estilos/Login.css";
 import MostrarOcultar from "./Mostrar-Ocultar";
 
 
-function Login() {
+function Login(handleClick) {
   return (
     <div>
       <header className="encabezado">
@@ -42,7 +42,7 @@ function Login() {
             <a href="./{ContraseñaOlvidada}">¿Has olvidado tu contraseña?</a>
           </div>
           <div className="boton">
-            <button className="btn">Iniciar Sesión</button>
+            <button className="btn" onClick={handleClick}>Iniciar Sesión</button>
           </div>
           <div className="registrate">
             <p>No tengo una cuenta...</p>
