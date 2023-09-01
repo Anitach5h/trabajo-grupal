@@ -1,3 +1,4 @@
+/* Estilos generales */
 .contenedor-principal {
   display: flex;
   flex-direction: column;
@@ -25,7 +26,6 @@
   text-decoration: underline;
   margin-bottom: 50px;
   margin-top: 60px;
-
 }
 
 .formulario {
@@ -64,5 +64,40 @@
 }
 
 .boton:hover {
+  background-color: darkred;
+}
+
+/* Estilos para la tarea */
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.task.completed {
+  background-color: #f0f0f0;
+}
+
+.emoji {
+  cursor: pointer;
+}
+
+.eliminar-boton {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.eliminar-boton:hover {
   background-color: darkred;
 }

@@ -1,5 +1,6 @@
 // src/components/Task.js
 import React from 'react';
+//import NuevaTarea from "../hojas-de-estilos/NuevaTarea.css";
 
 const Task = ({ task, toggleTask, deleteTask }) => {
   return (
