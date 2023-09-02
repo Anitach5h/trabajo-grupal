@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import "../hojas-de-estilos/Benja.css";
 import TaskList from './ListaTareas';
 import BarraBusqueda from './BarraBusqueda'
 
-function Benja ()  {
+function Benja() {
   const [tasks, setTasks] = useState([]);
   const [filteredTasks, setFilteredTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
@@ -59,52 +60,41 @@ function Benja ()  {
       setEditingTaskId(null); // Terminar la edición
     }
   };
-
+  
+  const handleAddKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      addTask(); // Agregar tarea si se presiona "Enter"
+    }
+  };
+  
   return (
-    <div className="app">
-      <h1>Lista de Tareas</h1>
-      <div className="add-task">
-        <input
-          type="text"
-          value={newTask}
-          onChange={(e) => setNewTask(e.target.value)}
-        />
-        <button onClick={addTask}>Agregar</button>
-      </div>
-      <div style={pageStyle}>
+    <div className='contenedor-principal'>
+      <div className="contenedor-interno">
+        <h1 className='titulo'>Lista de Tareas</h1>
+        <div className="agregar-tarea">
+          <input
+            className='agregar-input'
+            placeholder='Agregar aqui!'
+            type="text"
+            value={newTask}
+            onChange={(e) => setNewTask(e.target.value)}
+            onKeyDown={handleAddKeyDown}
+          />
+          <button onClick={addTask}>Agregar</button>
+        </div>
         <BarraBusqueda onSearch={handleSearch} />
+        <TaskList
+          tasks={filteredTasks}
+          toggleTask={toggleTask}
+          deleteTask={deleteTask}
+          editingTaskId={editingTaskId}
+          handleTaskEdit={handleTaskEdit}
+          editTask={editTask}
+          handleKeyDown={handleKeyDown}
+        />
       </div>
-      <TaskList
-        tasks={filteredTasks}
-        toggleTask={toggleTask}
-        deleteTask={deleteTask}
-        editingTaskId={editingTaskId}
-        handleTaskEdit={handleTaskEdit}
-        editTask={editTask}
-        handleKeyDown={handleKeyDown}
-      />
     </div>
   );
-};
-
-const pageStyle = {
-  marginTop: '20px',
-};
+}
 
 export default Benja;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

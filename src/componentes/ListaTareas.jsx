@@ -1,5 +1,5 @@
 import React from 'react';
-//import Task from './Tarea';
+import "../hojas-de-estilos/ListaTareas.css";
 
 const TaskList = ({
   tasks,
@@ -17,7 +17,7 @@ const TaskList = ({
   };
 
   return (
-    <div className="task-list">
+    <div className="lista-de-tarea">
       {tasks.map((task) => (
         <div key={task.id} className={`task ${task.completed ? 'completed' : ''}`}>
           {editingTaskId === task.id ? (
@@ -32,12 +32,11 @@ const TaskList = ({
               <span
                 className={task.completed ? 'completed' : ''}
                 onClick={() => toggleTask(task.id)}
-                style={{ cursor: 'pointer' }}
               >
-                {task.completed ? '👍' : '🤔'} {task.text}
+                 {task.text} {task.completed ? '👍' : '🤔'}
               </span>
-              <button onClick={() => editTask(task.id)}>Editar</button>
-              <button onClick={() => deleteTask(task.id)}>Eliminar</button>
+              <button onClick={() => editTask(task.id)} className='btn1.0'>Editar</button>
+              <button onClick={() => deleteTask(task.id)} className='btn1.1'>Eliminar</button>
             </>
           )}
         </div>

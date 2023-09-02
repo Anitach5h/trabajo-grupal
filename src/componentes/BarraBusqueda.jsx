@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../hojas-de-estilos/BarraBusqueda.css";
 
 const BarraBusqueda = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -19,45 +20,34 @@ const BarraBusqueda = ({ onSearch }) => {
     <div>
       <input
         type="text"
-        className="form-control mb-2"
+        className="control-de-formulario"
         placeholder="Ingrese tarea para buscar..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
-      <div className="form-check mb-2">
+      <div className="validacion-de-formulario">
         <input
           type="checkbox"
-          className="form-check-input"
+          className="verificacion-de-entrada"
           id="hechaCheck"
           checked={completedOnly}
           onChange={() => setCompletedOnly(!completedOnly)}
         />
-        <label className="form-check-label" htmlFor="hechaCheck">
+        <label className="verificacion-de-formulario2" htmlFor="hechaCheck">
           Tarea Hecha
         </label>
       </div>
       <select
-        className="form-control"
+        className="control-de-formulario2"
         value={searchBy}
         onChange={(e) => setSearchBy(e.target.value)}
       >
-        <option value="">Seleccionar por:</option>
+        <option value="" disabled >Seleccionar por:</option>
         <option value="fecha">Fecha</option>
         <option value="nombre">Nombre</option>
       </select>
-      <button
-        className="btn"
-        type="button"
-        style={{
-          backgroundColor: "crimson",
-          color: "white",
-          margin: "auto",
-          marginTop: "10px",
-          display: "block",
-        }}
-        onClick={handleSearch}
-      >
-        Buscar
+      <button className="btn3" type="button" onClick={handleSearch}>
+        <h1>Buscar</h1>
       </button>
     </div>
   );
