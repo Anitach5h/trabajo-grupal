@@ -1,5 +1,5 @@
 import React from "react";
-import "../hojas-de-estilo/ContraseñaOlvidada.css";
+import "../hojas-de-estilos/ContraseñaOlvidada.css";
 
 function ContraseñaOlvidada() {
   return (

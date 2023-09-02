@@ -1,6 +1,7 @@
 import React from 'react';
 import "../hojas-de-estilos/Login.css";
 import MostrarOcultar from "./Mostrar-Ocultar";
+import { Link } from 'react-router-dom';
 
 
 function Login(handleClick) {
@@ -39,7 +40,7 @@ function Login(handleClick) {
             <label><input type="checkbox" />Recordar mi nombre de Usuario</label>
           </div>
           <div className='pregunta'>
-            <a href="./{ContraseñaOlvidada}">¿Has olvidado tu contraseña?</a>
+            <Link to="./contraseña-olvidada">¿Has olvidado tu contraseña?</Link>
           </div>
           <div className="boton">
             <button className="btn" onClick={handleClick}>Iniciar Sesión</button>

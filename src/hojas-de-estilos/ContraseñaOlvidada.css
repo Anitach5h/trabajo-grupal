@@ -20,6 +20,7 @@
 
 .encabezado1 .buscar1 input {
   background: transparent;
+  text-align: left;
   font-size: 20px;
   border-radius: 5px;
   border: 2px solid white;
@@ -39,7 +40,7 @@
 .fondo1 {
   width: 100%;
   height: 100vh;
-  background-image: url('../imagenes-y-videos/paisaje-fondo-Login.png');
+  background-image: url('../imagenes/paisaje-fondo-Login.png');
   background-position: center;
   background-size: cover;
 }
@@ -51,7 +52,7 @@
   width: 75%;
   height: 75%;
   transform: translate(-50%, -50%);
-  background-image: url('../imagenes-y-videos/paisaje-fondo-Login.png');
+  background-image: url('../imagenes/paisaje-fondo-Login.png');
   background-position: center;
   background-size: cover;
   display: flex;
@@ -77,6 +78,7 @@
   font-weight: 700;
   top: -60px;
   left: 50px;
+  text-align: left;
 }
 
 .contenido1 h2 {
