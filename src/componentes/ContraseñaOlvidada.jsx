@@ -24,7 +24,7 @@ function ContraseñaOlvidada() {
           <a href="/" className="Logo1">¡Hola!</a>
           <h2>¿Has olvidado tu Contraseña?</h2>
           <h3>No te preocupes, Aqui vas a Poder Recuperar Tu Contraseña!</h3>
-          <p>Si no tenes acceso al correo con el que te registraste o otro tipo de problema con el acceso a tu correo. Contactate con el Soporte de Nuestra Pagina Web </p>
+          <p>Si no tenes acceso al correo con el que te registraste u otro tipo de problema con el acceso a tu correo, contactate con el Soporte de Nuestra Pagina Web </p>
         </div>
         <div className="recuperar">
           <h2>Recuperar Contraseña</h2>

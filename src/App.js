@@ -8,11 +8,11 @@ import { Routes, Route } from 'react-router-dom';
 export function App() {
   return (
       <div>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/contraseña-olvidada" element={<ContraseñaOlvidada />} />
-          <Route path="/sesion-iniciada" element={<Benja />} />
-        </Routes>
-      </div>
+       <Routes>
+  <Route path="/" element={<Login />} />
+  <Route path="/contraseña-olvidada" element={<ContraseñaOlvidada />} />
+  <Route path="/benja" element={<Benja />} />
+  </Routes>
+    </div>
   )
 }
