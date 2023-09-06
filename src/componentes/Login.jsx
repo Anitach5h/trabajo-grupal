@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import "../hojas-de-estilos/Login.css";
-//import MostrarOcultar from "./Mostrar-Ocultar";
 import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
   const [correo, setCorreo] = useState('');
   const [contraseña, setContraseña] = useState('');
-  const [mostrarContraseña, setMostrarContraseña] = useState(false); // Nuevo estado para mostrar/ocultar contraseña
+  const [mostrarContraseña, setMostrarContraseña] = useState(false);
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
@@ -14,13 +13,18 @@ function Login() {
     console.log('Contraseña:', contraseña);
 
     if (correo === 'admin' && contraseña === 'admin') {
-      navigate('/benja'); // Redirige al usuario a la ruta '/benja'
+      navigate('/benja');
     } else {
       alert('Inicio de sesión fallido. Verifica tus credenciales.');
     }
   }
 
-  // Función para mostrar/ocultar contraseña
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleLoginClick();
+    }
+  }
+
   const toggleMostrarContraseña = () => {
     setMostrarContraseña(!mostrarContraseña);
   }
@@ -53,7 +57,14 @@ function Login() {
         <div className="loguearse">
           <h2>Acceder</h2>
           <div className="entrada">
-            <input type="text" className="input1" placeholder="Correo" required onChange={(e) => setCorreo(e.target.value)} />
+            <input
+              type="text"
+              className="input1"
+              placeholder="Correo"
+              required
+              onChange={(e) => setCorreo(e.target.value)}
+              onKeyDown={handleKeyDown} // Controlador de evento para "Enter"
+            />
           </div>
 
           <div className="entrada">
@@ -64,17 +75,19 @@ function Login() {
               required
               value={contraseña}
               onChange={(e) => setContraseña(e.target.value)}
+              onKeyDown={handleKeyDown} // Controlador de evento para "Enter"
             />
-            <div onClick={toggleMostrarContraseña} className="show">
-            {mostrarContraseña ? "Ocultar" : "Mostrar"}
+            <div className='caja-del-boton'>
+              <div onClick={toggleMostrarContraseña} className="boton-secundario">
+                {mostrarContraseña ? "Ocultar Contraseña" : "Mostrar Contraseña"}
+              </div>
             </div>
           </div>
-
           <div className="controlar">
             <label><input type="checkbox" />Recordar mi nombre de usuario</label>
           </div>
           <div className='pregunta'>
-            <Link to="/contraseña-olvidada">¿Has olvidado tu contraseña?</Link>
+            <Link to="/contraseña-olvidada" className='link'>¿Has olvidado tu contraseña?</Link>
           </div>
           <div className="boton">
             <button className="btn" onClick={handleLoginClick}>Iniciar Sesión</button>
@@ -90,5 +103,3 @@ function Login() {
 }
 
 export default Login;
-
-

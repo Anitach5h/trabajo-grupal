@@ -5,7 +5,7 @@ const BarraBusqueda = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [completedOnly, setCompletedOnly] = useState(false);
   const [searchBy, setSearchBy] = useState("");
-  const [editingTaskId, setEditingTaskId] = useState(null);
+  // const [editingTaskId, setEditingTaskId] = useState(null);
 
 
   const handleSearch = () => {
